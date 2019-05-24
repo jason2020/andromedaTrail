@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Andromeda Trail</title>
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container full-width-container">
+		<div class="row">
+			<div class="twelve columns">
+				<div id="screenContainer" class="wrapper">
+					<img id="wagon" alt="Wagon" src="wagon.png">
+					<!-- <div id="updateHeader"></div> -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<div id="infoContainer" class="wrapper">
+					<div id="infoHeader">Sol 0</div>
+					<div id="infoText">The journey begins on Sol 1. The crew sets out from Caracalla in System 37492. The crewmembers hear of the wonderous opportunities for economic prosperity in Epsilon Deluvia 5, located 200,000 light years away. The crew are onboard a Warped Autonomous Gravitational and Oribital Nephascope (WAGON), which is set on reaching Epsilon Deluvia 5 on Sol 20</div>
+					<div id="status">YO</div>
+					<!-- <button id="toggle" class="button-primary">«</button> -->
+					<div id="infoInput">Press Space to continue</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<div id="modal">
+					<div class="modalContent">
+						<p>
+							Welcome to Andromeda Trail. Please select the names of the adventurers and begin playing!
+						</p>
+						<label for="person1">Person 1's Name</label>
+						<input type="text" id="person1" name="person1" value="John">
+						<label for="person1">Person 2's Name</label>
+						<input type="text" id="person2" name="person2" value="Mary">
+						<label for="person1">Person 3's Name</label>
+						<input type="text" id="person3" name="person3" value="Elizabeth">
+						<label for="person1">Person 4's Name</label>
+						<input type="text" id="person4" name="person4" value="Bob">
+						<br>
+						<div id="startGame" class="button">Start Game</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
