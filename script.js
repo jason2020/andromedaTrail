@@ -1,23 +1,23 @@
 let showStatus = false;
 let gameStart = false;
 
-$("#toggle").on("click", function() {
-	if (showStatus) {
-		showStatus = false;
-		$("#status").css("display", "none");
-		$("#infoText").css("display", "inline-block");
-	} else {
-		showStatus = true;
-		$("#status").html("");
-		for (let i = 0; i < gameElements.people.length; i++) {
-			$("#status").append(``);
-		}
-		$("#status").append(``);
-		$("#status").css("display", "inline-block");
-		$("#infoText").css("display", "hidden");
-	}
-	$("#toggle").blur();
-});
+// $("#toggle").on("click", function() {
+// 	if (showStatus) {
+// 		showStatus = false;
+// 		$("#status").css("display", "none");
+// 		$("#infoText").css("display", "inline-block");
+// 	} else {
+// 		showStatus = true;
+// 		$("#status").html("");
+// 		for (let i = 0; i < gameElements.people.length; i++) {
+// 			$("#status").append(`OXEN Number: ${gameElements.wagon.oxenNum}, Hyper drive state: ${gameElements.wagon.hyperDrive}`);
+// 		}
+// 		$("#status").append(``);
+// 		$("#status").css("display", "inline-block");
+// 		$("#infoText").css("display", "hidden");
+// 	}
+// 	$("#toggle").blur();
+// });
 
 class Person {
 	constructor(name, life, intell, strength) {
@@ -42,17 +42,17 @@ const gameScripts = {
 		["While traveling through space, a slow moving metorite bumps into the WAGON. The metorite carries hyper drive fuel. +20% to hyper drive", "HDRIVE", 20],
 		["While traveling through space, the crew meets some aliens. The aliens are from Sector 29343 in System 46388. These aliens are covered in green fur and have bright red eyes. They are approximately five feet tall and are have a humanoid shape. The communicate using tactile rhythms. They offer an OXEN as a gift. +1 OXEN", "OXEN", 1],
 		["Along the way, some friendly merchants from Xenon in System 2892 cross paths with the crew. The merchants have a small rodent-like appearence with dark blue eyes. They can fluently speak any language in the local supercluster. The merchants generously give a LIFE-PACK. +2 life to a random person.", "LIFE", 2],
-		["The crew continue on their journey, when suddendly, the WAGON is surrounded by a pure white light. A deep, staccato voice speaks. The crew members are unable to understand the words. The light fades away. All crew members feel a surge in vitality and strength. +1 life to everyone", "ALLIFE", 1],
+		["The crew continue on their journey, when suddendly, the WAGON is surrounded by a pure white light. A deep, staccato voice speaks. The crew members are unable to understand the words. The light fades away. All crew members feel a surge in vitality and strength. +1 life to everyone.", "ALLIFE", 1],
 		["A friendly colony of Xorgs approach the WAGON. They offer two OXEN as gifts. +2 OXEN", "OXEN", 2],
 		["A friendly colony of Xorgs approach the WAGON. They offer three OXEN as gifts. +3 OXEN", "OXEN", 3],
 		["A wormhole appears in front of the WAGON. The WAGON is pulled into the wormhole due to the immense force from gravity. Space and time bend around the WAGON. The WAGON appears to have moved towards Epsilon Deluvia 5, which has significantly shortened the journey.", "WORMHOLE", -2],
 		["A wormhole appears in front of the WAGON. The WAGON is pulled into the wormhole due to the immense force from gravity. Space and time bend around the WAGON. The WAGON appears to have moved towards Epsilon Deluvia 5, which has significantly shortened the journey.", "WORMHOLE", -3],
-		["The WAGON passes a super massive black hole. The disortions in space and time result in the time dilating and space contracting. The journey is shortened slightly and the WAGON is accelerated towards Epsilon Deluvia 5", "WORMHOLE", -1],
+		["The WAGON passes a super massive black hole. The disortions in space and time result in the time dilating and space contracting. The journey is shortened slightly and the WAGON is accelerated towards Epsilon Deluvia 5.", "WORMHOLE", -1],
 		["The WAGON reaches a central space station. Hyper drive fuel is restore at the station. +50% to hyper drive", "HDRIVE", 50],
 		["While traveling through space, a slow moving metorite bumps into the WAGON. The metorite carries hyper drive fuel. +20% to hyper drive", "HDRIVE", 20],
 		["While traveling through space, the crew meets some aliens. The aliens are from Sector 29343 in System 46388. These aliens are covered in green fur and have bright red eyes. They are approximately five feet tall and are have a humanoid shape. The communicate using tactile rhythms. They offer an OXEN as a gift. +1 OXEN", "OXEN", 1],
 		["Along the way, some friendly merchants from Xenon in System 2892 cross paths with the crew. The merchants have a small rodent-like appearence with dark blue eyes. They can fluently speak any language in the local supercluster. The merchants generously give a LIFE-PACK. +2 life to a random person.", "LIFE", 2],
-		["The crew continue on their journey, when suddendly, the WAGON is surrounded by a pure white light. A deep, staccato voice speaks. The crew members are unable to understand the words. The light fades away. All crew members feel a surge in vitality and strength. +1 life to everyone", "ALLIFE", 1],
+		["The crew continue on their journey, when suddendly, the WAGON is surrounded by a pure white light. A deep, staccato voice speaks. The crew members are unable to understand the words. The light fades away. All crew members feel a surge in vitality and strength. +1 life to everyone.", "ALLIFE", 1],
 		["A friendly colony of Xorgs approach the WAGON. They offer two OXEN as gifts. +2 OXEN", "OXEN", 2],
 		["A friendly colony of Xorgs approach the WAGON. They offer three OXEN as gifts. +3 OXEN", "OXEN", 3],
 		["A wormhole appears in front of the WAGON. The WAGON is pulled into the wormhole due to the immense force from gravity. Space and time bend around the WAGON. The WAGON appears to have moved towards Epsilon Deluvia 5, which has significantly shortened the journey.", "WORMHOLE", -2],
@@ -77,9 +77,9 @@ const gameScripts = {
 		[" contracts a deadly space virus. The virus causes internal bleeding and is lethal.", "SICK", 30],
 		["A meteorite strikes the WAGON. Significant damage is inflicted on the WAGON. The hyper drive is damaged. -30% to hyper drive", "HDRIVE", -30],
 		["A meteorite strikes the WAGON. Significant damage is inflicted on the WAGON. The hyper drive is damaged. -20% to hyper drive", "HDRIVE", -20],
-		["A crew of wild space pirates attack the WAGON. They steal two OXEN. -2 OXEN", "OXEN", -2],
+		["A crew of wild space pirates attack the WAGON. They steal two OXEN. -4 OXEN", "OXEN", -4],
 		["A crew of wild space pirates attack the WAGON. They steal three OXEN. -3 OXEN", "OXEN", -3],
-		["A crew of wild space pirates attack the WAGON. They steal an OXEN. -1 OXEN", "OXEN", -1],
+		["A crew of wild space pirates attack the WAGON. They steal an OXEN. -2 OXEN", "OXEN", -2],
 		["Solar radiation causes the hyper drive to degrade. -5% to hyper drive", "HDRIVE", -10],
 		["A crew of wild space pirates attack the WAGON. The crew fends off the attackers, but the pirates manage to hurt on of the crew members. -2 life to a random person.", "LIFE", -2],
 		["The WAGON passes through an astroid belt. The large rocks crash into the WAGON. A OXEN is destroyed from the barrage of rocks. -1 OXEN", "OXEN", -1],
@@ -114,7 +114,6 @@ function gameEventHandler(evt) {
 	if (showStatus) {
 		$("#toggle").click();
 	}
-	console.log(evt);
 	switch (evt[1]) {
 		case "HDRIVE": 
 			gameElements.wagon.hyperDrive += 20;
@@ -152,13 +151,12 @@ function gameEventHandler(evt) {
 			break;
 		default:
 			alert("Error, something is broken. Ask Jason if this is not Jason. Whoops haha.");
-			console.log(evt[1]);
 			break;
 	}
 }
 
-function updateHeaderText(text) {
-	$("#updateHeader").html(text);
+function updateHeaderText() {
+	$("#updateHeader p").html(`OXEN Number: ${gameElements.wagon.oxenNum} <br> Hyper Drive State: ${gameElements.wagon.hyperDrive}`);
 }
 
 $("#startGame").on("click", function() {
@@ -171,7 +169,6 @@ $("#startGame").on("click", function() {
 		let strength = Math.random() > 0.5 ? 6 : 4;
 		gameElements.people.push(new Person($name, life, intell, strength));
 	}
-	console.log(gameElements);
 });
 
 
@@ -239,21 +236,20 @@ function checkWin() {
 	}
 }
 
+updateHeaderText();
+
 $(document).keypress(function(e) {
 	if (e.which == 32 && gameStart) {
 		if (checkGameState()) {
 			if (Math.random() > 0.5) {
-				let foo = Math.floor(Math.random() * gameScripts.goodText.length);
-				console.log(foo);
-				gameEventHandler(gameScripts.goodText[foo]);
+				gameEventHandler(gameScripts.goodText[Math.floor(Math.random() * gameScripts.goodText.length)]);
 			} else {
-				let bar = Math.floor(Math.random() * gameScripts.badText.length)
-				console.log(bar);
-				gameEventHandler(gameScripts.badText[bar]);
+				gameEventHandler(gameScripts.badText[Math.floor(Math.random() * gameScripts.badText.length)]);
 			}
 			checkAlive();
 			checkFuel();
 			checkWin();
+			updateHeaderText();
 		} else {
 			gameStart = false;
 			$("#modal > .modalContent").html("<p>Game Over! Everyone is dead. Refresh to try again.</p>")

@@ -105,7 +105,13 @@ html, body {
 	-webkit-border-radius: 12px; 
 	-moz-border-radius: 12px; 
 	border-radius: 12px; 
-	line-height: 10vh;
+	text-align: center;
+	display: table;
+}
+
+#updateHeader > p {
+	display: table-cell; 
+	vertical-align: middle; 
 	text-align: center;
 }
 
